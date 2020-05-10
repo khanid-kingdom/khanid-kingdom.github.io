@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 
@@ -26,8 +25,7 @@ function compute(form) {
 	
 	shipVolley = 1484; //t2 null hot
 	shipROF = 2; //gun cycle time
-	console.log(secstatus)
-	console.log(Math.floor(secstatus/shipROF));
+
 	shipsNeeded = Math.ceil(ehp/(shipVolley*(Math.ceil(secstatus/shipROF))));
 	volleysNeeded = Math.ceil(ehp/(shipsNeeded*shipVolley));
 	alert("You will need " + shipsNeeded + " t2 catalysts doing " + volleysNeeded + " volleys to destroy the target");
@@ -39,7 +37,7 @@ function compute(form) {
 <fieldset>
 <label>How many t2 cats do I need to gank it?</label>
 <p>
-<label><input type="text" name="ehp" /> EHP against Null</label><br>
+<label><input type="text" name="ehp" /> EHP against Void</label><br>
 <label><input type="radio" name="security" value="19" checked />0.5</label>
 <label><input type="radio" name="security" value="14" />0.6</label>
 <label><input type="radio" name="security" value="10" />0.7</label>
