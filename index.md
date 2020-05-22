@@ -73,10 +73,10 @@ function compute(form) {
 <label><input type="radio" name="security" value="6" />1.0</label>
 <label>System security</label></p>
 <p>
-<label><input type="radio" name="shiptype" value="t1cat" checked />t1 catalysts</label>
-<label><input type="radio" name="shiptype" value="t2cat" />t2 catalysts</label>
-<label><input type="radio" name="shiptype" value="t1talos" />t1 taloses</label>
-<label><input type="radio" name="shiptype" value="t2talos" />t2 taloses</label></p>
+<label><input type="radio" name="shiptype" value="t1cat" checked /><a href="fits/t1cat.md">t1 catalysts</a></label>
+<label><input type="radio" name="shiptype" value="t2cat" /><a href="fits/t2cat.md">t2 catalysts</a></label>
+<label><input type="radio" name="shiptype" value="t1talos" /><a href="fits/t1talos.md">t1 taloses</a></label>
+<label><input type="radio" name="shiptype" value="t2talos" /><a href="fits/t2talos.md">t2 taloses</a></label></p>
 <p>
 <label><input type="checkbox" name="correction">Apply the Darwin correction (+20% EHP on target)</label></p>
 <p>
