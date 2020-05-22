@@ -38,11 +38,11 @@ function compute(form) {
             break;
         case 't1talos':
             shipVolley = 5200; //5301 perfect skills
-            shipROF = 5; // 4.15 perfect skills
+            shipROF = 4.2; // 4.15 perfect skills
             break;
         case 't2talos':
             shipVolley = 7300; //7479 perfect skills
-            shipROF = 5; // 4.15 perfect skills
+            shipROF = 4.2; // 4.15 perfect skills
             break;
     }
 
@@ -71,9 +71,9 @@ function compute(form) {
 <label>System security</label></p>
 <p>
 <label><input type="radio" name="shiptype" value="t1cat" checked />t1 catalysts</label>
-<label><input type="radio" name="shiptype" value="t2cat"  />t2 catalysts</label>
-<label><input type="radio" name="shiptype" value="t1talos" disabled />t1 taloses</label>
-<label><input type="radio" name="shiptype" value="t2talos" disabled />t2 taloses</label></p>
+<label><input type="radio" name="shiptype" value="t2cat" />t2 catalysts</label>
+<label><input type="radio" name="shiptype" value="t1talos" />t1 taloses</label>
+<label><input type="radio" name="shiptype" value="t2talos" />t2 taloses</label></p>
 <p>
 <label><input type="checkbox" name="correction">Apply the Darwin correction (+20% EHP on target)</label></p>
 <p>
