@@ -60,7 +60,7 @@ function compute(form) {
 <fieldset>
 <center><h3><label>How many do I need to gank it?</label></h3></center>
 <p>
-<label><input type="text" name="ehp" /> EHP against Antimatter/Void</label><br>
+<label><input type="text" name="ehp" /> EHP against Antimatter/Void</label><br></p>
 <p>
 <label><input type="radio" name="security" value="19" checked />0.5</label>
 <label><input type="radio" name="security" value="14" />0.6</label>
@@ -68,16 +68,15 @@ function compute(form) {
 <label><input type="radio" name="security" value="7" />0.8</label>
 <label><input type="radio" name="security" value="6" />0.9</label>
 <label><input type="radio" name="security" value="6" />1.0</label>
-<label>System security</label>
+<label>System security</label></p>
 <p>
 <label><input type="radio" name="shiptype" value="t1cat" checked />t1 catalysts</label>
 <label><input type="radio" name="shiptype" value="t2cat"  />t2 catalysts</label>
 <label><input type="radio" name="shiptype" value="t1talos" disabled />t1 taloses</label>
-<label><input type="radio" name="shiptype" value="t2talos" disabled />t2 taloses</label>
+<label><input type="radio" name="shiptype" value="t2talos" disabled />t2 taloses</label></p>
 <p>
-<label><input type="checkbox" name="correction">Apply the Darwin correction (+20% EHP on target)</label> 
+<label><input type="checkbox" name="correction">Apply the Darwin correction (+20% EHP on target)</label></p>
 <p>
-<button type="button" onclick="compute(this.form)" name="getVal">Gankulate</button>
+<button type="button" onclick="compute(this.form)" name="getVal">Gankulate</button></p>
 </fieldset>
 </form>
-
