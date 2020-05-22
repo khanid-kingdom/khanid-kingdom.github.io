@@ -1,3 +1,4 @@
+<pre>
 [Talos, t1 gank]
 
 Magnetic Field Stabilizer II
@@ -29,3 +30,4 @@ Hobgoblin II x5
 
 
 Caldari Navy Antimatter Charge L x160
+</pre>
