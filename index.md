@@ -1,6 +1,3 @@
-<html>
-<head>
-
 <style>
 form {
     width: 400px;
@@ -8,30 +5,31 @@ form {
 </style>
 
 <script>
-function compute(form) {
-    ehp = parseInt(form.ehp.value,10);
-	var radios = document.getElementsByName('security');
-
-    var secstatus;
-	var shipsNeeded;
-	var volleysNeeded;
-	
-    for (var i = 0, length = radios.length; i < length; i++) {
+function getRadios(name) {
+    var val;
+	var radios = document.getElementsByName(name);
+	for (var i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
-            secstatus = radios[i].value;
+            val = radios[i].value;
             break;
         }
     }
+	return val;
+}
+
+function compute(form) {
+    var ehp = parseInt(form.ehp.value,10);
+    var secstatus = getRadios('security');
+	var shipsNeeded;
+	var volleysNeeded;
 	
 	shipVolley = 1484; //t2 null hot
 	shipROF = 2; //gun cycle time
-
 	shipsNeeded = Math.ceil(ehp/(shipVolley*(Math.ceil(secstatus/shipROF))));
 	volleysNeeded = Math.ceil(ehp/(shipsNeeded*shipVolley));
 	alert("You will need " + shipsNeeded + " t2 catalysts doing " + volleysNeeded + " volleys to destroy the target");
 }
 </script>
-</head>
 
 <form action="#" method="post" class="gankulator" id="gankulator">
 <fieldset>
@@ -50,4 +48,3 @@ function compute(form) {
 </fieldset>
 </form>
 
-</html>
