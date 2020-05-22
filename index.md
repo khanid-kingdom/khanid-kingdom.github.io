@@ -10,14 +10,14 @@ form {
 <script>
 function getRadios(name) {
     var val;
-	var radios = document.getElementsByName(name);
-	for (var i = 0, length = radios.length; i < length; i++) {
+    var radios = document.getElementsByName(name);
+    for (var i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
             val = radios[i].value;
             break;
         }
     }
-	return val;
+    return val;
 }
 
 function compute(form) {
