@@ -5,6 +5,9 @@ body {
 form {
     width: 500px;
 }
+label {
+    padding: 0 3px 0 3px;
+}
 </style>
 
 <script>
