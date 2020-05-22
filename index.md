@@ -1,6 +1,9 @@
 <style>
+body {
+    font-family: sans-serif;
+}
 form {
-    width: 400px;
+    width: 500px;
 }
 </style>
 
@@ -20,31 +23,32 @@ function getRadios(name) {
 function compute(form) {
     var ehp = parseInt(form.ehp.value,10);
     var secstatus = getRadios('security');
-	var shipsNeeded;
-	var volleysNeeded;
+    var correction = form.correction.checked;
+    var shipsNeeded;
+    var volleysNeeded;
 	
-	switch (getRadios('shiptype')) {
-	case 't2cat':
-	    shipVolley = 1450; //1484 perfect skills
-		shipROF = 2; // 1.93 perfect skills
-		break;
-	case 't1cat':
-		shipVolley = 830; //1484 perfect skills
-		shipROF = 2; // 1.97 perfect skills
-		break;
-	case 't1talos':
-	    shipVolley = 5200; //5301 perfect skills
-		shipROF = 5; // 4.15 perfect skills
-		break;
-    case 't2talos':
-	    shipVolley = 7300; //7479 perfect skills
-		shipROF = 5; // 4.15 perfect skills
-		break;
-	}
-		
-	shipsNeeded = Math.ceil(ehp/(shipVolley*(Math.ceil(secstatus/shipROF))));
-	volleysNeeded = Math.ceil(ehp/(shipsNeeded*shipVolley));
-	alert("You will need " + shipsNeeded + " ships doing " + volleysNeeded + " volleys each to destroy the target.");
+    switch (getRadios('shiptype')) {
+        case 't2cat':
+            shipVolley = 1450; //1484 perfect skills
+            shipROF = 2; // 1.93 perfect skills
+            break;
+        case 't1cat':
+            shipVolley = 800; //830 perfect skills
+            shipROF = 2; // 1.97 perfect skills
+            break;
+        case 't1talos':
+            shipVolley = 5200; //5301 perfect skills
+            shipROF = 5; // 4.15 perfect skills
+            break;
+        case 't2talos':
+            shipVolley = 7300; //7479 perfect skills
+            shipROF = 5; // 4.15 perfect skills
+            break;
+    }
+
+    shipsNeeded = Math.ceil(ehp/(shipVolley*(Math.ceil(secstatus/shipROF))));
+    volleysNeeded = Math.ceil(ehp/(shipsNeeded*shipVolley));
+    alert("You will need " + shipsNeeded + " ships doing " + volleysNeeded + " volleys each to destroy the target.");
 }
 </script>
 
