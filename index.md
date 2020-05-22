@@ -46,6 +46,10 @@ function compute(form) {
             break;
     }
 
+    if (correction) {
+        ehp = ehp * 1.2;
+    }
+
     shipsNeeded = Math.ceil(ehp/(shipVolley*(Math.ceil(secstatus/shipROF))));
     volleysNeeded = Math.ceil(ehp/(shipsNeeded*shipVolley));
     alert("You will need " + shipsNeeded + " ships doing " + volleysNeeded + " volleys each to destroy the target.");
@@ -70,6 +74,8 @@ function compute(form) {
 <label><input type="radio" name="shiptype" value="t2cat"  />t2 catalysts</label>
 <label><input type="radio" name="shiptype" value="t1talos" disabled />t1 taloses</label>
 <label><input type="radio" name="shiptype" value="t2talos" disabled />t2 taloses</label>
+<p>
+<label><input type="checkbox" name="correction">Apply the Darwin correction (+20% EHP on target)</label> 
 <p>
 <button type="button" onclick="compute(this.form)" name="getVal">Gankulate</button>
 </fieldset>
