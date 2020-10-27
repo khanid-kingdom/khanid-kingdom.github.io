@@ -83,3 +83,24 @@ function compute(form) {
 <button type="button" onclick="compute(this.form)" name="getVal">Gankulate</button></p>
 </fieldset>
 </form>
+
+<script>
+function moongoo(form) {
+    var t0 = parseInt(form.t0.value,10);
+    var t24 = parseInt(form.t24.value,10);
+    dailymove = t0 - t24;
+    poptime = Math.floor((t24-130)/dailymove);
+    
+    alert("This moon will pop in " + poptime + " days");
+</script>
+
+<hr>
+<form action="#" method="post" class="popculator" id="popculator">
+<fieldset>
+<center><h3><label>When will that moon pop?</label></h3></center>
+<p><label><input type="text" name="t0" />Initial distance</label></p>
+<p><label><input type="text" name="t24" />Distance after 24hrs</label><br></p>
+<p><a href="howto.html">How to get these values?</a><br></p>
+<p><button type="button" onclick="moongoo(this.form)" name="">Moongoolate</button></p>
+</fieldset>
+</form>
