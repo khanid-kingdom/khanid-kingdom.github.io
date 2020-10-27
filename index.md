@@ -92,6 +92,7 @@ function moongoo(form) {
     poptime = Math.floor((t24-130)/dailymove);
     
     alert("This moon will pop in " + poptime + " days");
+}
 </script>
 
 <hr>
