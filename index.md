@@ -99,8 +99,8 @@ function moongoo(form) {
 <form action="#" method="post" class="popculator" id="popculator">
 <fieldset>
 <center><h3><label>When will that moon pop?</label></h3></center>
-<p><label><input type="text" name="t0" /> Initial distance</label></p>
-<p><label><input type="text" name="t24" /> Distance after 24hrs</label><br></p>
+<p><label><input type="text" name="t0" /> Initial distance (km)</label></p>
+<p><label><input type="text" name="t24" /> Distance after 24hrs (km)</label><br></p>
 <p><a href="howto.html">How to get these values?</a><br></p>
 <p><button type="button" onclick="moongoo(this.form)" name="">Moongoolate</button></p>
 </fieldset>
