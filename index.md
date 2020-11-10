@@ -89,7 +89,7 @@ function moongoo(form) {
     var t0 = parseInt(form.t0.value,10);
     var t24 = parseInt(form.t24.value,10);
     dailymove = t0 - t24;
-    poptime = Math.floor((t24-130)/dailymove);
+    poptime = Math.ceil((t24-130)/dailymove);
     
     alert("This moon will pop in " + poptime + " days");
 }
